@@ -1,4 +1,4 @@
-// Create and array of Words
+// Create an array of Words
 var words = ["Al Michaels", "Angels", "Arnold Palmer", "Astros", "Athletics", "auto racing", "Avalanche", "Babe Didrikson", "Babe Ruth",
  "badminton", "Barry Sanders", "baseball", "basketball", "Bears", "Ben Hogan", "Bengals", "Bill Russell", "Blackhawks", "Blue Jackets",
   "Blue Jays", "Blues", "Bo Jackson", "Bob Costas", "Bobby Orr", "bobsleigh", "bowling", "boxing", "Braves", "Brett Favre", "Brewers", 
@@ -24,10 +24,12 @@ var words = ["Al Michaels", "Angels", "Arnold Palmer", "Astros", "Athletics", "a
     "Warriors", "Wayne Gretzky", "weightlifting", "White Sox", "wiffleball", "Wild", "Willie Mays", "Wilt Chamberlain", "Wizards", "wrestling", 
     "Yankees"];
 
+
 // Choose words randomly
 var randomNum = Math.floor(Math.random() * words.length);
 var choosenWord = words[randomNum];
 var underScore = [];
+choosenWord.toLowerCase();
 console.log(choosenWord);
 // Create _ on lenth of words
 var createUnderScore = () => {
@@ -39,6 +41,15 @@ var createUnderScore = () => {
 
 console.log(createUnderScore());
 // Get users guess
+document.addEventListener('keyup', (event) => {
+    var keyWord = String.fromCharCode(event.keyCode);
+    keyWord.toLowerCase()
+    console.log(choosenWord.indexOf(keyWord));
+    if(choosenWord.indexOf(keyWord) > -1) {
+        console.log(true);
+    }
+    console.log(keyWord);
+});
 // Check if guess is right
 // If right, push to right array
 //  If wrong, push to wrong array
