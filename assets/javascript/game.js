@@ -28,8 +28,11 @@ var words = ["Al Michaels", "Angels", "Arnold Palmer", "Astros", "Athletics", "a
 // Choose words randomly
 var randomNum = Math.floor(Math.random() * words.length);
 var choosenWord = words[randomNum];
+var rightWord = [];
+var wrongWord = [];
 var underScore = [];
-choosenWord.toLowerCase();
+
+
 console.log(choosenWord);
 // Create _ on lenth of words
 var createUnderScore = () => {
@@ -45,8 +48,11 @@ document.addEventListener('keyup', (event) => {
     var keyWord = String.fromCharCode(event.keyCode);
     keyWord.toLowerCase()
     console.log(choosenWord.indexOf(keyWord));
+// 
     if(choosenWord.indexOf(keyWord) > -1) {
-        console.log(true);
+        rightWord.push(keyWord);}
+        else{
+        wrongWord.push(keyWord);
     }
     console.log(keyWord);
 });
