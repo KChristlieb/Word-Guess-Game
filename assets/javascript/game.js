@@ -1,28 +1,28 @@
 // Create an array of Words
-var words = ["Al Michaels", "Angels", "Arnold Palmer", "Astros", "Athletics", "auto racing", "Avalanche", "Babe Didrikson", "Babe Ruth",
- "badminton", "Barry Sanders", "baseball", "basketball", "Bears", "Ben Hogan", "Bengals", "Bill Russell", "Blackhawks", "Blue Jackets",
-  "Blue Jays", "Blues", "Bo Jackson", "Bob Costas", "Bobby Orr", "bobsleigh", "bowling", "boxing", "Braves", "Brett Favre", "Brewers", 
-  "Broncos", "Browns", "Bruins", "Buccaneers", "Buffalo Bills", "Bulls", "Canadiens", "Canucks", "Capitals", "Cardinals", "Carl Lewis",
-   "catcher", "Cavaliers", "Celtics", "Chargers", "cheerleading", "Chiefs", "Chris Evert", "Clippers", "coach", "Colts", "Cowboys",
-    "Coyotes", "crew", "cricket", "Cubs", "curling", "Cy Young", "Deion Sanders", "Derek Jeter", "Devils", "Diamondbacks", "Diego Maradona", 
-    "Dodgers", "Dolphins", "Ducks", "Eagles", "endurance running", "Falcons", "fencing", "field hockey", "Field of Dreams", "fishing", "Flames", 
-    "Floyd", "Flyers", "football", "Giants", "goalie", "Gold Glove", "gold medal", "Golden State", "golf", "Green Bay", "Green Jacket", "Grizzlies", 
-    "gynastics", "Hank Aaron", "Hawks", "Heat", "Heisman", "homerun", "Hornets", "Howard Cosell", "Hurricanes", "ice hockey", "Indians", "Islanders", 
-    "Jack Nicklaus", "Jackie Joyner", "Jackie Robinson", "Jaguars", "Jazz", "Jerry Rice", "Jesse Owens", "Jets", "Jim Brown", "Jim Thorpe", "Joe Buck", 
-    "Joe DiMaggio", "Joe Montana", "Johnny Unitas", "Kings", "Knicks", "Kobe Bryant", "lacrosse", "Lakers", "Lance Armstrong", "Larry Bird", 
-    "Lawrence Taylor", "LeBron James", "Lightning", "Lionel Messi", "Lions", "Lou Gehrig", "Magic", "Magic Johnson", "manager", "Manny Pacquiao", 
-    "Maple Leafs", "Mariners", "Mario Lemieux", "Mark Spitz", "Marlins", "Martina", "Marv Albert", "Mavericks", "Mets", "Michael Johnson", 
-    "Michael Jordan", "Michael Phelps", "Michael Vick", "Mickey Mantle", "mixed martial arts", "most valuable player", "Muhammad Ali", "Nationals", 
-    "Nets", "Nuggets", "Oilers", "Olympics", "Orioles", "Oscar Robertson", "Pacers", "Packers", "Padres", "Panthers", "Patriots", "Pelicans", 
-    "Penguins", "perfect game", "Pete Sampras", "Peyton Manning", "Phillies", "Pirates", "Pistons", "point guard", "poker", "polo", "Predators", 
-    "punt", "quarterback", "Raiders", "Rams", "Rangers", "Raptors", "Ravens", "Rays", "rebound", "Red Grange", "Red Sox", "Red Wings", "Reds", 
-    "Redskins", "Roberto Clemente", "Rockets", "Rockies", "Rocky", "Roger Federer", "roller derby", "rowing", "Royals", "Rudy", "rugby", "Sabres", 
-    "Saints", "Sandy Koufax", "Seahawks", "Secretariat", "Senators", "Serena Williams", "Sharks", "shutout", "Silver Slugger", "skateboarding", 
-    "skiing", "snowboarding", "soccer", "Spurs", "Stanley Cup", "Stars", "Steelers", "strikeout", "Suns", "surfing", "sweep", "swimming", 
-    "Ted Williams", "tennis", "Texans", "Thunder", "Tiger Woods", "Tigers", "Timberwolves", "Titans", "Tom Brady", "touchdown", "track", 
-    "Trail Blazers", "Twins", "Ty Cobb", "ultimate", "Usain Bolt", "Vikings", "Vin Scully", "Vince Lombardi", "volleyball", "Walter Payton", 
-    "Warriors", "Wayne Gretzky", "weightlifting", "White Sox", "wiffleball", "Wild", "Willie Mays", "Wilt Chamberlain", "Wizards", "wrestling", 
-    "Yankees"];
+var words = ["AL MICHAELS", "ANGELS", "ARNOLD PALMER", "ASTROS", "ATHLETICS", "AUTO RACING", "AVALANCHE", "BABE DIDRIKSON", "BABE RUTH",
+"BADMINTON", "BARRY SANDERS", "BASEBALL", "BASKETBALL", "BEARS", "BEN HOGAN", "BENGALS", "BILL RUSSELL", "BLACKHAWKS", "BLUE JACKETS",
+ "BLUE JAYS", "BLUES", "BO JACKSON", "BOB COSTAS", "BOBBY ORR", "BOBSLEIGH", "BOWLING", "BOXING", "BRAVES", "BRETT FAVRE", "BREWERS", 
+ "BRONCOS", "BROWNS", "BRUINS", "BUCCANEERS", "BUFFALO BILLS", "BULLS", "CANADIENS", "CANUCKS", "CAPITALS", "CARDINALS", "CARL LEWIS",
+  "CATCHER", "CAVALIERS", "CELTICS", "CHARGERS", "CHEERLEADING", "CHIEFS", "CHRIS EVERT", "CLIPPERS", "COACH", "COLTS", "COWBOYS",
+   "COYOTES", "CREW", "CRICKET", "CUBS", "CURLING", "CY YOUNG", "DEION SANDERS", "DEREK JETER", "DEVILS", "DIAMONDBACKS", "DIEGO MARADONA", 
+   "DODGERS", "DOLPHINS", "DUCKS", "EAGLES", "ENDURANCE RUNNING", "FALCONS", "FENCING", "FIELD HOCKEY", "FIELD OF DREAMS", "FISHING", "FLAMES", 
+   "FLOYD", "FLYERS", "FOOTBALL", "GIANTS", "GOALIE", "GOLD GLOVE", "GOLD MEDAL", "GOLDEN STATE", "GOLF", "GREEN BAY", "GREEN JACKET", "GRIZZLIES", 
+   "GYNASTICS", "HANK AARON", "HAWKS", "HEAT", "HEISMAN", "HOMERUN", "HORNETS", "HOWARD COSELL", "HURRICANES", "ICE HOCKEY", "INDIANS", "ISLANDERS", 
+   "JACK NICKLAUS", "JACKIE JOYNER", "JACKIE ROBINSON", "JAGUARS", "JAZZ", "JERRY RICE", "JESSE OWENS", "JETS", "JIM BROWN", "JIM THORPE", "JOE BUCK", 
+   "JOE DIMAGGIO", "JOE MONTANA", "JOHNNY UNITAS", "KINGS", "KNICKS", "KOBE BRYANT", "LACROSSE", "LAKERS", "LANCE ARMSTRONG", "LARRY BIRD", 
+   "LAWRENCE TAYLOR", "LEBRON JAMES", "LIGHTNING", "LIONEL MESSI", "LIONS", "LOU GEHRIG", "MAGIC", "MAGIC JOHNSON", "MANAGER", "MANNY PACQUIAO", 
+   "MAPLE LEAFS", "MARINERS", "MARIO LEMIEUX", "MARK SPITZ", "MARLINS", "MARTINA", "MARV ALBERT", "MAVERICKS", "METS", "MICHAEL JOHNSON", 
+   "MICHAEL JORDAN", "MICHAEL PHELPS", "MICHAEL VICK", "MICKEY MANTLE", "MIXED MARTIAL ARTS", "MOST VALUABLE PLAYER", "MUHAMMAD ALI", "NATIONALS", 
+   "NETS", "NUGGETS", "OILERS", "OLYMPICS", "ORIOLES", "OSCAR ROBERTSON", "PACERS", "PACKERS", "PADRES", "PANTHERS", "PATRIOTS", "PELICANS", 
+   "PENGUINS", "PERFECT GAME", "PETE SAMPRAS", "PEYTON MANNING", "PHILLIES", "PIRATES", "PISTONS", "POINT GUARD", "POKER", "POLO", "PREDATORS", 
+   "PUNT", "QUARTERBACK", "RAIDERS", "RAMS", "RANGERS", "RAPTORS", "RAVENS", "RAYS", "REBOUND", "RED GRANGE", "RED SOX", "RED WINGS", "REDS", 
+   "REDSKINS", "ROBERTO CLEMENTE", "ROCKETS", "ROCKIES", "ROCKY", "ROGER FEDERER", "ROLLER DERBY", "ROWING", "ROYALS", "RUDY", "RUGBY", "SABRES", 
+   "SAINTS", "SANDY KOUFAX", "SEAHAWKS", "SECRETARIAT", "SENATORS", "SERENA WILLIAMS", "SHARKS", "SHUTOUT", "SILVER SLUGGER", "SKATEBOARDING", 
+   "SKIING", "SNOWBOARDING", "SOCCER", "SPURS", "STANLEY CUP", "STARS", "STEELERS", "STRIKEOUT", "SUNS", "SURFING", "SWEEP", "SWIMMING", 
+   "TED WILLIAMS", "TENNIS", "TEXANS", "THUNDER", "TIGER WOODS", "TIGERS", "TIMBERWOLVES", "TITANS", "TOM BRADY", "TOUCHDOWN", "TRACK", 
+   "TRAIL BLAZERS", "TWINS", "TY COBB", "ULTIMATE", "USAIN BOLT", "VIKINGS", "VIN SCULLY", "VINCE LOMBARDI", "VOLLEYBALL", "WALTER PAYTON", 
+   "WARRIORS", "WAYNE GRETZKY", "WEIGHTLIFTING", "WHITE SOX", "WIFFLEBALL", "WILD", "WILLIE MAYS", "WILT CHAMBERLAIN", "WIZARDS", "WRESTLING", 
+   "YANKEES"];
 
 
 // Choose words randomly
@@ -32,31 +32,45 @@ var rightWord = [];
 var wrongWord = [];
 var underScore = [];
 
+// Dom Manipulation
+
+var domUnderScore = document.getElementsByClassName('underscore');
+
+
 
 console.log(choosenWord);
 // Create _ on lenth of words
 var createUnderScore = () => {
      for(var i = 0; i < choosenWord.length; i++) {
-         underScore.push('_');
+        underScore.push('_');
+        domUnderScore[0].innerHTML = underScore.join(' ')
      }
      return underScore;
-}
+
+}         
 
 console.log(createUnderScore());
 // Get users guess
 document.addEventListener('keyup', (event) => {
     var keyWord = String.fromCharCode(event.keyCode);
-    keyWord.toLowerCase()
     console.log(choosenWord.indexOf(keyWord));
-// 
+// add to rightWord array
     if(choosenWord.indexOf(keyWord) > -1) {
-        rightWord.push(keyWord);}
+        rightWord.push(keyWord);
+        underScore[choosenWord.indexOf(keyWord)] = keyWord;
+        if(underScore.join(' ') === choosenWord) {
+            alert('You Win!!!')
+        } 
+            console.log(underScore);
+        }
         else{
         wrongWord.push(keyWord);
+        console.log(wrongWord);
     }
     console.log(keyWord);
 });
 // Check if guess is right
 // If right, push to right array
+
 //  If wrong, push to wrong array
 
