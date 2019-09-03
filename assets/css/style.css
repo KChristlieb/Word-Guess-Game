@@ -1,43 +1,118 @@
-header {
-    border: 3px solid black;
-    font-size: 26px;
-    text-align: center;
-    margin: 0 auto;
-    height: 150px;
-    width: 65%;
-    margin-top: 25px;
-}
+body {
+    background-color: #F3EE10;
+  }
+  
+  #pokeLogo {
+    width: 700px;
+    height: 250px;
+    margin-top: 50px;
+    margin-left: 400px;
+  }
+  
 
-hr {
-    width: 95%;
-}
-
-.underscore {
-    border: 1px solid black;
-    font-size: 32px;
+  #resultTextChange {
+    font-family: 'Patrick Hand', cursive;
     text-align: center;
-    margin: 0 auto;
-    height: 150px;
-    width: 65%;
-    margin-top: 25px;
-}
+    padding: 0;
+    margin-top: 60px;
+    margin-right: 40px;
+    font-size: 30px;
+  }
+  
+  .fullGrid {
+    height: 750px;
+    width: 450px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    border: 5px dotted #000;
+  }
+  
+  .leftGrid {
+    float: left;
+    margin-left: 280px;
+  }
+  
+  #pokemon {
+    height: 275px;
+    width: 375px;
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+  
+  .answerImage {
+    height: 275px;
+    width: 375px;
+    margin-top: 10px;
+    margin-left: 40px;
+    visibility: hidden;
+  }
+  
+  #bulbasaur {
+    margin-top: -350px;
+  }
+  
+  #ivysaur {
+    padding-bottom: 350px;
+  }
+  
+  #venusaur {
+    padding-bottom: 300px;
+  }
+  
+  #charmander {
+    padding-bottom: 440px;
+  }
+  
+  #charmeleon {
+    padding-bottom: 440px
+  }
+  
+  #charizard {
+    padding-bottom: 270px;
+  }
 
-.right {
-    border: 1px solid black;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
-    height: 150px;
-    width: 65%;
-    margin-top: 25px;
-}
+  #squirtle {
 
-.wrong {
-    border: 1px solid black;
-    font-size: 20px;
+  }
+
+  #wartortle {
+
+  }
+
+  #blastoise {
+
+  }
+
+  #articuno {
+
+  }
+
+  #zapdos {
+
+  }
+
+  #moltres {
+
+  }
+
+  #mewtwo {
+
+  }
+
+  #mew {
+
+  }
+  
+  .rightGrid {
+    float: left;
+    border-left: none;
+    margin-left: 5px;
+  }
+  
+  .gridText {
+    font-family: 'Patrick Hand', cursive;
     text-align: center;
-    margin: 0 auto;
-    height: 150px;
-    width: 65%;
-    margin-top: 25px;
-}
+    font-size: 25px;
+    line-height: 60px;
+  }
+  

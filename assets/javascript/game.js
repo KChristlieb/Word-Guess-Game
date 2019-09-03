@@ -1,76 +1,219 @@
-// Create an array of Words
-var words = ["AL MICHAELS", "ANGELS", "ARNOLD PALMER", "ASTROS", "ATHLETICS", "AUTO RACING", "AVALANCHE", "BABE DIDRIKSON", "BABE RUTH",
-"BADMINTON", "BARRY SANDERS", "BASEBALL", "BASKETBALL", "BEARS", "BEN HOGAN", "BENGALS", "BILL RUSSELL", "BLACKHAWKS", "BLUE JACKETS",
- "BLUE JAYS", "BLUES", "BO JACKSON", "BOB COSTAS", "BOBBY ORR", "BOBSLEIGH", "BOWLING", "BOXING", "BRAVES", "BRETT FAVRE", "BREWERS", 
- "BRONCOS", "BROWNS", "BRUINS", "BUCCANEERS", "BUFFALO BILLS", "BULLS", "CANADIENS", "CANUCKS", "CAPITALS", "CARDINALS", "CARL LEWIS",
-  "CATCHER", "CAVALIERS", "CELTICS", "CHARGERS", "CHEERLEADING", "CHIEFS", "CHRIS EVERT", "CLIPPERS", "COACH", "COLTS", "COWBOYS",
-   "COYOTES", "CREW", "CRICKET", "CUBS", "CURLING", "CY YOUNG", "DEION SANDERS", "DEREK JETER", "DEVILS", "DIAMONDBACKS", "DIEGO MARADONA", 
-   "DODGERS", "DOLPHINS", "DUCKS", "EAGLES", "ENDURANCE RUNNING", "FALCONS", "FENCING", "FIELD HOCKEY", "FIELD OF DREAMS", "FISHING", "FLAMES", 
-   "FLOYD", "FLYERS", "FOOTBALL", "GIANTS", "GOALIE", "GOLD GLOVE", "GOLD MEDAL", "GOLDEN STATE", "GOLF", "GREEN BAY", "GREEN JACKET", "GRIZZLIES", 
-   "GYNASTICS", "HANK AARON", "HAWKS", "HEAT", "HEISMAN", "HOMERUN", "HORNETS", "HOWARD COSELL", "HURRICANES", "ICE HOCKEY", "INDIANS", "ISLANDERS", 
-   "JACK NICKLAUS", "JACKIE JOYNER", "JACKIE ROBINSON", "JAGUARS", "JAZZ", "JERRY RICE", "JESSE OWENS", "JETS", "JIM BROWN", "JIM THORPE", "JOE BUCK", 
-   "JOE DIMAGGIO", "JOE MONTANA", "JOHNNY UNITAS", "KINGS", "KNICKS", "KOBE BRYANT", "LACROSSE", "LAKERS", "LANCE ARMSTRONG", "LARRY BIRD", 
-   "LAWRENCE TAYLOR", "LEBRON JAMES", "LIGHTNING", "LIONEL MESSI", "LIONS", "LOU GEHRIG", "MAGIC", "MAGIC JOHNSON", "MANAGER", "MANNY PACQUIAO", 
-   "MAPLE LEAFS", "MARINERS", "MARIO LEMIEUX", "MARK SPITZ", "MARLINS", "MARTINA", "MARV ALBERT", "MAVERICKS", "METS", "MICHAEL JOHNSON", 
-   "MICHAEL JORDAN", "MICHAEL PHELPS", "MICHAEL VICK", "MICKEY MANTLE", "MIXED MARTIAL ARTS", "MOST VALUABLE PLAYER", "MUHAMMAD ALI", "NATIONALS", 
-   "NETS", "NUGGETS", "OILERS", "OLYMPICS", "ORIOLES", "OSCAR ROBERTSON", "PACERS", "PACKERS", "PADRES", "PANTHERS", "PATRIOTS", "PELICANS", 
-   "PENGUINS", "PERFECT GAME", "PETE SAMPRAS", "PEYTON MANNING", "PHILLIES", "PIRATES", "PISTONS", "POINT GUARD", "POKER", "POLO", "PREDATORS", 
-   "PUNT", "QUARTERBACK", "RAIDERS", "RAMS", "RANGERS", "RAPTORS", "RAVENS", "RAYS", "REBOUND", "RED GRANGE", "RED SOX", "RED WINGS", "REDS", 
-   "REDSKINS", "ROBERTO CLEMENTE", "ROCKETS", "ROCKIES", "ROCKY", "ROGER FEDERER", "ROLLER DERBY", "ROWING", "ROYALS", "RUDY", "RUGBY", "SABRES", 
-   "SAINTS", "SANDY KOUFAX", "SEAHAWKS", "SECRETARIAT", "SENATORS", "SERENA WILLIAMS", "SHARKS", "SHUTOUT", "SILVER SLUGGER", "SKATEBOARDING", 
-   "SKIING", "SNOWBOARDING", "SOCCER", "SPURS", "STANLEY CUP", "STARS", "STEELERS", "STRIKEOUT", "SUNS", "SURFING", "SWEEP", "SWIMMING", 
-   "TED WILLIAMS", "TENNIS", "TEXANS", "THUNDER", "TIGER WOODS", "TIGERS", "TIMBERWOLVES", "TITANS", "TOM BRADY", "TOUCHDOWN", "TRACK", 
-   "TRAIL BLAZERS", "TWINS", "TY COBB", "ULTIMATE", "USAIN BOLT", "VIKINGS", "VIN SCULLY", "VINCE LOMBARDI", "VOLLEYBALL", "WALTER PAYTON", 
-   "WARRIORS", "WAYNE GRETZKY", "WEIGHTLIFTING", "WHITE SOX", "WIFFLEBALL", "WILD", "WILLIE MAYS", "WILT CHAMBERLAIN", "WIZARDS", "WRESTLING", 
-   "YANKEES"];
+//Initial Variables
+var wins = 0;
+var guessesRemaining = 12;
+var gameFinished = false;
 
+//Computer Choice Array:
+var wordArray = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "articuno", "zapdos", "moltres", "mewtwo", "mew"];
+var wordChoice = wordArray[Math.floor(Math.random() * wordArray.length)];
+console.log(wordChoice);
 
-// Choose words randomly
-var randomNum = Math.floor(Math.random() * words.length);
-var choosenWord = words[randomNum];
-var rightWord = [];
-var wrongWord = [];
-var underScore = [];
+var alreadyGuessed = [];
 
-// Dom Manipulation
+guessesRemainingFunction();
 
-var domUnderScore = document.getElementsByClassName('underscore');
+//keypress function to start things off
+  document.onkeypress = function(event) {
+    var userGuess = event.key;
+    userGuess = userGuess.toLowerCase();
+    wordCheck(userGuess);
+    drawPlaySpace();
+  };
 
-
-
-console.log(choosenWord);
-// Create _ on lenth of words
-var createUnderScore = () => {
-     for(var i = 0; i < choosenWord.length; i++) {
-        underScore.push('_');
-        domUnderScore[0].innerHTML = underScore.join(' ')
-     }
-     return underScore;
-
-}         
-
-console.log(createUnderScore());
-// Get users guess
-document.addEventListener('keyup', (event) => {
-    var keyWord = String.fromCharCode(event.keyCode);
-    console.log(choosenWord.indexOf(keyWord));
-// add to rightWord array
-    if(choosenWord.indexOf(keyWord) > -1) {
-        rightWord.push(keyWord);
-        underScore[choosenWord.indexOf(keyWord)] = keyWord;
-        if(underScore.join(' ') === choosenWord) {
-            alert('You Win!!!')
-        } 
-            console.log(underScore);
-        }
-        else{
-        wrongWord.push(keyWord);
-        console.log(wrongWord);
+//function for checking the guesses against words, includes what happens for a win or a loss as well as letter verify
+function wordCheck(userGuess) {
+  if (gameFinished === true) {
+    resetFunction();
+    return;
+  }
+  var isItLetter = false;
+  var alphabetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  for (i = 0; i < alphabetArray.length; i++) {
+    if (userGuess === alphabetArray[i]) {
+      isItLetter = true;
     }
-    console.log(keyWord);
-});
-// Check if guess is right
-// If right, push to right array
+  }
+  if (isItLetter === false) {
+    alert("For the right PokeBall, please select a letter.");
+    return;
+  }
+  var doesItMatch = false;
+    for (i = 0; i < wordChoice.length; i++) {
+      if (userGuess === wordChoice[i]) {
+        doesItMatch = true;
+        playSpace[i] = userGuess;
+      }
+    }
+    var didWeWin = true;
+      for (i = 0; i < wordChoice.length; i++) {
+        if (playSpace[i] != wordChoice[i]) {
+          didWeWin = false;
+        }
+      }
+      if (didWeWin === true) {
+        winnerFunction();
+        return;
+      }
+    for (i = 0; i < alreadyGuessed.length; i++) {
+      if (userGuess === alreadyGuessed[i]) {
+        return;
+      }
+    }
+    if (!doesItMatch) {
+     guessesRemaining--;
+     guessesRemainingFunction();
+     alreadyGuessed.push(userGuess);
+     alreadyGuessedFunction();
+   }
+   if (guessesRemaining === 0) {
+     loserFunction();
+     return;
+   }
+  }
 
-//  If wrong, push to wrong array
+  function alreadyGuessedFunction() {
+    document.getElementById("already-guessed").innerHTML = alreadyGuessed;
+  }
 
+  function guessesRemainingFunction() {
+    document.getElementById("guesses-remaining").innerHTML = guessesRemaining;
+  }
+
+  document.getElementById("current-word").innerHTML = playSpace;
+
+//functions for creating underscores and spaces between the underscores
+function drawBlanks() {
+  var underscoreArray = [];
+  for (i = 0; i < wordChoice.length; i++) {
+    underscoreArray.push("_");
+  }
+  return underscoreArray;
+}
+
+var playSpace = drawBlanks();
+
+function drawPlaySpace() {
+  for (i = 0; i < playSpace.length; i++) {
+    document.getElementById("current-word").innerHTML = playSpace.join(" ");
+  }
+}
+
+ drawPlaySpace();
+
+//Audio Variables for Win/Lose/Reset functions
+ var audio1 = new Audio("./assets/audio/Pokemon-Theme-Song.mp3");
+
+ var audio2 = new Audio("./assets/music/yougotbeefsquatched.wav");
+
+
+
+
+//functions for a win, a loss, and/or a reset
+ function winnerFunction() {
+   switch (wordChoice) {
+     case "bulbasaur":
+     document.getElementById("pokemon").style.visibility = "hidden";
+     document.getElementById("bulbasaur").style.visibility = "visible";
+     document.getElementById("resultTextChange").innerHTML = "Alriiiiight! It's Linda!";
+     audio1.play();
+     audio1.volume = 0.05;
+     break;
+     case "ivysaur":
+     document.getElementById("pokemon").style.visibility = "hidden";
+     document.getElementById("ivysaur").style.visibility = "visible";
+     document.getElementById("resultTextChange").innerHTML = "THIS IS ME NOW! It's Beefsquatch!";
+     audio1.play();
+     audio1.volume = 0.05;
+     break;
+     case "fischoeder":
+     document.getElementById("pokemon").style.visibility = "hidden";
+     document.getElementById("fischoeder").style.visibility = "visible";
+     document.getElementById("resultTextChange").innerHTML = "You can work in my coal mine! It's Calvin Fischoeder!";
+     audio1.play();
+     audio1.volume = 0.05;
+     break;
+     case "louise":
+     document.getElementById("pokemon").style.visibility = "hidden";
+     document.getElementById("louise").style.visibility = "visible";
+     document.getElementById("resultTextChange").innerHTML = "Enough with Canada! It's Louise!";
+     audio1.play();
+     audio1.volume = 0.05;
+     break;
+     case "marshmallow":
+     document.getElementById("pokemon").style.visibility = "hidden";
+     document.getElementById("marshmallow").style.visibility = "visible";
+     document.getElementById("resultTextChange").innerHTML = "If you show me a sweet potato pie, I am on top of it. It's Marshmallow!";
+     audio1.play();
+     audio1.volume = 0.05;
+     break;
+     case "frond":
+     document.getElementById("pokemon").style.visibility = "hidden";
+     document.getElementById("frond").style.visibility = "visible";
+     document.getElementById("resultTextChange").innerHTML = "Don't throw Repressed Memory Emily! It's Mr. Frond!";
+     audio1.volume = 0.05;
+     audio1.play();
+     break;
+     case "mudflap":
+     document.getElementById("pokemon").style.visibility = "hidden";
+     document.getElementById("mudflap").style.visibility = "visible";
+     document.getElementById("resultTextChange").innerHTML = "Oh, Mudflap? Uh that was my grandmother's name. It's Mudflap!";
+     audio1.play();
+     audio1.volume = 0.05;
+     break;
+   }
+   wins++;
+   winsFunction();
+ }
+
+ function winsFunction() {
+   document.getElementById("total-wins").innerHTML = wins;
+   gameFinished = true;
+ }
+
+ function loserFunction() {
+   if (guessesRemaining === 0) {
+    document.getElementById("bobFamily").style.visibility = "hidden";
+    document.getElementById("tinaSad").style.visibility = "visible";
+    document.getElementById("resultTextChange").innerHTML = "You Lost! Try again!";
+    audio8.play();
+    audio8.volume = 0.05;
+    gameFinished = true;
+    }
+ }
+
+ function resetFunction() {
+   document.getElementById("bobFamily").style.visibility = "visible";
+   document.getElementById("tinaSad").style.visibility = "hidden";
+   document.getElementById("resultTextChange").innerHTML = "";
+   document.getElementById("linda").style.visibility = "hidden";
+   document.getElementById("beefsquatch").style.visibility = "hidden";
+   document.getElementById("fischoeder").style.visibility = "hidden";
+   document.getElementById("louise").style.visibility = "hidden";
+   document.getElementById("marshmallow").style.visibility = "hidden";
+   document.getElementById("frond").style.visibility = "hidden";
+   document.getElementById("mudflap").style.visibility = "hidden";
+   alreadyGuessed.length = 0;
+   alreadyGuessedFunction();
+   guessesRemaining = 12;
+   guessesRemainingFunction();
+   wordChoice = wordArray[Math.floor(Math.random() * wordArray.length)];
+   console.log(wordChoice);
+   playSpace = drawBlanks();
+   gameFinished = false;
+   audio1.pause();
+   audio1.currentTime = 0;
+   audio2.pause();
+   audio2.currentTime = 0;
+   audio3.pause();
+   audio3.currentTime = 0;
+   audio4.pause();
+   audio4.currentTime = 0;
+   audio5.pause();
+   audio5.currentTime = 0;
+   audio6.pause();
+   audio6.currentTime = 0;
+   audio7.pause();
+   audio7.currentTime = 0;
+   audio8.pause();
+   audio8.currentTime = 0;
+ }

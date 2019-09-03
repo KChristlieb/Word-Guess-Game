@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Word Guess</title> 
-        <link rel="stylesheet" href="assets/css/reset.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="JavaScript" href="assets/javascript/game.js">
-    </head>
-    <body>
-        <div class="container">
-            <header>
-                <h1>Hangman!!!!</h1>
-                <hr>
-                <h2>Sports!!!</h2>
-            </header>
-            <div class="underscore"></div>
-            <div class="right">Right Answer</div>
-            <div class="wrong">Wrong Answer</div>
-        </div>
-        <script src="assets/javascript/game.js" type="text/javascript"></script>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Patrick+Hand" rel="stylesheet">
+  <title>Pokemon Word Guessing Game</title>
+</head>
+<body>
+    <div class="header">
+      <img src="./assets/images/Logo.png" alt="Pokemon Hangman Logo" id="pokeLogo">
+    </div>
+    <div class="resultText">
+      <p id="resultTextChange"></p>
+    </div>
+    <div class="leftGrid fullGrid" id="image-place">
+      <img src="./assets/images/pokemongroup.jpg"   alt="All Gen 1 Pokemon" id="pokemon">
+      <img src="./assets//images/bulbasaur.png"     alt="bulbasaur" id="bulbasaur"  class="answerImage">
+      <img src="./assets/images/ivysaur.png"        alt="ivysaur" id="ivysaur" class="answerImage">
+      <img src="./assets/images/venusaur.png"       alt="venusaur" id="venusaur" class="answerImage">
+      <img src="./assets/images/charmander.png"     alt="charmander" id="charmander" class="answerImage">
+      <img src="./assets/images/charmeleon.png"     alt="charmeleon" id="charmeleon" class="answerImage">
+      <img src="./assets/images/charizard.png"      alt="charizard" id="charizard" class="answerImage">
+      <img src="./assets/images/squirtle.png"       alt="squirtle" id="squirtle" class="answerImage">
+      <img src="./assets/images/wartortle.png"      alt="wartortle" id="wartortle" class="answerImage">
+      <img src="./assets/images/blastoise.png"      alt="blastoise" id="blastoise" class="answerImage">
+      <img src="./assets/images/articuno.png"       alt="articuno" id="articuno" class="answerImage">
+      <img src="./assets/images/zapdos.png"         alt="zapdos" id="zapdos" class="answerImage">
+      <img src="./assets/images/moltres.png"        alt="moltres" id="moltres" class="answerImage">
+      <img src="./assets/images/mewtwo.png"         alt="mewtwo" id="mewtwo" class="answerImage">
+      <img src="./assets/images/mew.png"            alt="mew" id="mew" class="answerImage">
+    </div>
+    <div class="rightGrid fullGrid">
+      <div class="gridText">
+        <p>Press Any Key to Begin!</p>
+        <p>Wins</p>
+        <p id="total-wins">0</p>
+        <p>Current Word</p>
+        <p id="current-word"></p>
+        <p>Number of Guesses Remaining</p>
+        <p id="guesses-remaining"></p>
+        <p>Letters Already Guessed</p>
+        <p id="already-guessed"></p>
+      </div>
+    </div>
+<script src="./assets/javascript/game.js"></script>
+</body>
 </html>
