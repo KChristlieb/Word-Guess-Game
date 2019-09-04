@@ -1,13 +1,11 @@
 body {
     background-color: #F3EE10;
-    height: 100%;
-    width: 100%;
   }
   
   #pokeLogo {
-    width: 700px;
-    height: 250px;
-    margin-top: 50px;
+    width: 650px;
+    height: 175px;
+    margin-top: 25px;
     margin-left: 400px;
   }
   
@@ -22,10 +20,10 @@ body {
   }
   
   .fullGrid {
-    height: 750px;
+    height: 600px;
     width: 450px;
-    margin-top: 20px;
-    margin-bottom: 100px;
+    margin-top: 10px;
+    margin-bottom: 0px;
     border: 5px dotted #000;
   }
   
@@ -42,67 +40,72 @@ body {
   }
   
   .answerImage {
+    width: 350px;
     height: 275px;
-    width: 375px;
-    margin-top: 10px;
-    margin-left: 40px;
+    margin-left: 50px;
+    margin-top: -800px;
+    padding-bottom: 100px;
     visibility: hidden;
   }
   
   #bulbasaur {
-    margin-top: -350px;
+    padding-bottom: 1px;
   }
-  
+
   #ivysaur {
-    padding-bottom: 350px;
+    padding-bottom: 50px;
   }
   
   #venusaur {
-    padding-bottom: 300px;
+    padding-bottom: 50px;
   }
   
   #charmander {
-    padding-bottom: 440px;
+    padding-bottom: 50px;
   }
   
   #charmeleon {
-    padding-bottom: 440px;
+    padding-bottom: 50px;
   }
   
-  #charizard {
-    padding-bottom: 270px;
+#charizard {
+    padding-bottom: 100px;
   }
 
   #squirtle {
-    padding-bottom: 440px;
+    padding-bottom: 50px;
   }
 
   #wartortle {
-    padding-bottom: 440px;
+    padding-bottom: 100px;
   }
 
   #blastoise {
-    padding-bottom: 440px;
+    padding-bottom: 100px;
   }
 
   #articuno {
-    padding-bottom: 440px;
+    padding-bottom: 150px;
   }
 
   #zapdos {
-    padding-bottom: 440px;
+    padding-bottom: 150px;
   }
 
   #moltres {
-    padding-bottom: 440px;
+    padding-bottom: 175px;
   }
 
   #mewtwo {
-    padding-bottom: 440px;
+    padding-bottom: 175px;
+  }
+
+  #mew {
+    padding-bottom: 175px;
   }
 
   #team_rocket {
-    padding-bottom: 440px;
+    padding-bottom: 175px;
   }
 
   .rightGrid {

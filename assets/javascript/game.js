@@ -4,7 +4,7 @@ var guessesRemaining = 12;
 var gameFinished = false;
 
 //Computer Choice Array:
-var wordArray = ["bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard", "squirtle", "wartortle", "blastoise", "articuno", "zapdos", "moltres", "mewtwo", "mew"];
+var wordArray = ["BULBASAUR", "IVYSAUR", "VENUSAUR", "CHARMANDER", "CHARMELEON", "CHARIZARD", "SQUIRTLE", "WARTORTLE", "BLASTOISE", "ARTICUNO", "ZAPDOS", "MOLTRES", "MEWTWO", "MEW"];
 var wordChoice = wordArray[Math.floor(Math.random() * wordArray.length)];
 console.log(wordChoice);
 
@@ -15,7 +15,7 @@ guessesRemainingFunction();
 //keypress function to start things off
 document.onkeypress = function (event) {
     var userGuess = event.key;
-    userGuess = userGuess.toLowerCase();
+    userGuess = userGuess.toUpperCase();
     wordCheck(userGuess);
     drawPlaySpace();
 };
@@ -27,7 +27,7 @@ function wordCheck(userGuess) {
         return;
     }
     var isItLetter = false;
-    var alphabetArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var alphabetArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
     for (i = 0; i < alphabetArray.length; i++) {
         if (userGuess === alphabetArray[i]) {
             isItLetter = true;
@@ -111,98 +111,98 @@ var audio2 = new Audio("./assets/audio/team-rocket.mp3");
 //functions for a win, a loss, and/or a reset
 function winnerFunction() {
     switch (wordChoice) {
-        case "bulbasaur":
+        case "BULBASAUR":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("bulbasaur").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Bulbasaur!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "ivysaur":
+        case "IVYSAUR":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("ivysaur").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Ivysaur!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "venusaur":
+        case "VENUSAUR":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("venusaur").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Vennusaur!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "charmander":
+        case "CHARMANDER":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("charmander").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Charmander!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "charmeleon":
+        case "CHARMELEON":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("charmeleon").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Charmeleon!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "charizard":
+        case "CHARIZARD":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("charizard").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Charizard!";
             audio1.volume = 0.05;
             audio1.play();
             break;
-        case "squirtle":
+        case "SQUIRTLE":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("squirtle").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Squirtle!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "wartortle":
+        case "WARTORTLE":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("wartortle").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Wartortle!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "blastoise":
+        case "BLASTOISE":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("blastoise").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Blastoise!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "articuno":
+        case "ARTICUNO":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("articuno").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Articuno!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "zapdos":
+        case "ZAPDOS":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("zapdos").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught a Zapdos!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "moltres":
+        case "MOLTRES":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("moltres").style.visibility = "visible"
             document.getElementById("resultTextChange").innerHTML = "You caught a Moltres!";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "mewtwo":
+        case "MEWTWO":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("mewtwo").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "MewTwo has caught you......";
             audio1.play();
             audio1.volume = 0.05;
             break;
-        case "mew":
+        case "MEW":
             document.getElementById("pokemon").style.visibility = "hidden";
             document.getElementById("mew").style.visibility = "visible";
             document.getElementById("resultTextChange").innerHTML = "You caught Mew!";
@@ -234,7 +234,7 @@ function resetFunction() {
     document.getElementById("pokemon").style.visibility = "visible";
     document.getElementById("team_rocket").style.visibility = "hidden";
     document.getElementById("resultTextChange").innerHTML = "";
-    document.getElementById("bulbasur").style.visibility = "hidden";
+    document.getElementById("bulbasaur").style.visibility = "hidden";
     document.getElementById("ivysaur").style.visibility = "hidden";
     document.getElementById("venusaur").style.visibility = "hidden";
     document.getElementById("charmander").style.visibility = "hidden";
