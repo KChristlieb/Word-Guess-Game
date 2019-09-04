@@ -1,5 +1,7 @@
 body {
     background-color: #F3EE10;
+    height: 100%;
+    width: 100%;
   }
   
   #pokeLogo {
@@ -64,7 +66,7 @@ body {
   }
   
   #charmeleon {
-    padding-bottom: 440px
+    padding-bottom: 440px;
   }
   
   #charizard {
@@ -72,37 +74,37 @@ body {
   }
 
   #squirtle {
-
+    padding-bottom: 440px;
   }
 
   #wartortle {
-
+    padding-bottom: 440px;
   }
 
   #blastoise {
-
+    padding-bottom: 440px;
   }
 
   #articuno {
-
+    padding-bottom: 440px;
   }
 
   #zapdos {
-
+    padding-bottom: 440px;
   }
 
   #moltres {
-
+    padding-bottom: 440px;
   }
 
   #mewtwo {
-
+    padding-bottom: 440px;
   }
 
-  #mew {
-
+  #team_rocket {
+    padding-bottom: 440px;
   }
-  
+
   .rightGrid {
     float: left;
     border-left: none;
